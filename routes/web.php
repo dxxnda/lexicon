@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthCustController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoryController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +22,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/dashboard',[HomeController::class,'index']);
+Route::get('/home',[HomeController::class,'index']);
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'loginStore']);
+Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/register', [AuthController::class, 'registrasi'])->name('register');
+Route::post('/register', [AuthController::class, 'registrasiStore']);
+Route::group(['middleware' => ['auth', 'super']], function(){
+    Route::resource('category', CategoryController::class);
+    Route::resource('book', BookController::class);
+
+});

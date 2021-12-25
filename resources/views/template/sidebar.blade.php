@@ -4,7 +4,7 @@
     <a href="index3.html" class="brand-link">
         <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">Admin GriscaBeauty</span>
     </a>
 
     <!-- Sidebar -->
@@ -15,7 +15,7 @@
                 <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">Adin</a>
             </div>
         </div>
 
@@ -41,20 +41,11 @@
                     <a href="{{url('/home')}}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
-                           
-                        </p>
-                    </a>
-                   
-                </li>
-                <li class="nav-item">
-                    <a href="{{url('/transaction')}} " class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                           Transaction
+                            Dashboard           
                         </p>
                     </a>
                 </li>
+                
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
@@ -69,35 +60,21 @@
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Nama Kategori</p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url('/category/create')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tambah Kategori</p>
-                            </a>
-                        </li>                      
+                        </li>                     
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url('/book')}} " class="nav-link">
+                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <p>
+                           Book
+                        </p>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>Product
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{url('/product')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Nama Produk</p>
-                            </a>
-                        </li>                                            
-                    </ul>
-                </li>    
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>Cart
+                        <p>Borrower
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -105,74 +82,27 @@
                         <li class="nav-item">
                             <a href="{{url('/cart')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Nama Produk</p>
+                                <p>Nama Peminjam</p>
                             </a>
                         </li>                                            
                     </ul>
                 </li>    
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{url('/transaction')}} " class="nav-link">
                         <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>State
-                            <i class="right fas fa-angle-left"></i>
+                        <p>
+                           Borrow
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{url('/product')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>List State</p>
-                            </a>
-                        </li>                                            
-                    </ul>
-                </li>    
+                </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>Bank
-                            <i class="right fas fa-angle-left"></i>
+                    <a href="{{url('/user')}} " class="nav-link">
+                        <i class="fas fa-book-reader"></i>
+                        <p>
+                           User
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{url('/product')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Name</p>
-                            </a>
-                        </li>                                            
-                    </ul>
-                </li>    
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>Kurir
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{url('/product')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Name</p>
-                            </a>
-                        </li>                                            
-                    </ul>
-                </li>     <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>City
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{url('/product')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Name</p>
-                            </a>
-                        </li>                                            
-                    </ul>
-                </li>    
+                </li>
                 <li class="nav-item">
                     <a href="{{url('/logout')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
